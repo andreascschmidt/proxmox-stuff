@@ -36,9 +36,9 @@ tar -xvf proxmoxroot.2017-12-02.15.48.10.tar
 for i in pve-cluster pvedaemon vz qemu-server; do systemctl stop $i ; done
 
 # Copy the old content to the original directory:
-cp -avr /var/tmp/var/tmp/etc /etc
-cp -avr /var/tmp/var/tmp/var /var
-cp -avr /var/tmp/var/tmp/root /root
+cp -avr /var/tmp/etc /etc
+cp -avr /var/tmp/var /var
+cp -avr /var/tmp/root /root
 
 # And, finally, restart services:
 for i in qemu-server vz pvedaemon pve-cluster; do systemctl start $i ; done
